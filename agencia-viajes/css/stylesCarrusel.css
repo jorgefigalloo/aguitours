@@ -2,34 +2,31 @@
 .carousel-section {
     text-align: center;
     padding: 2rem 0;
-}
-
-.carousel-section h2 {
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    width: 100%; /* Asegura que ocupe todo el ancho */
 }
 
 .carousel-container {
     position: relative;
-    max-width: 800px;
+    max-width: 100%; /* Elimina el límite de 800px */
     margin: 0 auto;
     overflow: hidden;
 }
 
 .carousel {
-    display: flex;
+    display: flex; /* Alinea los elementos horizontalmente */
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-item {
-    min-width: 100%;
+    min-width: 100%; /* Cada imagen ocupa el ancho completo del contenedor */
     box-sizing: border-box;
     position: relative;
 }
 
 .carousel-item img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* La imagen ocupará todo el ancho disponible */
+    height: 650px; /* Altura ajustada para mayor visibilidad */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin deformarla */
     display: block;
 }
 
@@ -71,25 +68,22 @@
     background: rgba(0, 0, 0, 0.8);
 }
 
-
-
-
-/* Contenedor principal del carrusel */
-.carousel-section {
-    text-align: center;
-    padding: 2rem 0;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+/* Indicadores de puntos */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.carousel-container {
-    position: relative;
-    max-width: 100%; /* Elimina el límite de 800px */
-    margin: 0 auto;
-    overflow: hidden;
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
 }
 
-.carousel-item img {
-    width: 100%; /* La imagen ocupará todo el ancho disponible */
-    height: auto; /* Mantener la proporción */
-    display: block;
+.indicator.active {
+    background: #fff;
 }
